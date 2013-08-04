@@ -1,10 +1,17 @@
 Change Log
 ==========
 
+Version 1.0.2
+-------------
+
+Updated README
+
+
 Version 1.0.1
 -------------
 
 Added CHANGELOG
+
 
 Version 1.0.0
 -------------
