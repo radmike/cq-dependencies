@@ -10,14 +10,13 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cq-dependencies-all</artifactId>
+    <artifactId>cq-dependencies-install</artifactId>
     <packaging>content-package</packaging>
 
     <name>${project.groupId} - ${project.artifactId}</name>
 
     <description>
-        Builds a CQ package containing all components of the 'CQ Dependencies' project. Useful for making formal
-        releases to QA and production environments for example.
+        Builds a CQ package containing basic OSGI dependencies that can be installed into CQ. Contains the CQ Blueprints OSGI dependencies, which provide useful taglib functionality.
     </description>
 
     <properties>
@@ -25,28 +24,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cq-dependencies-config</artifactId>
-            <version>${project.version}</version>
-            <type>content-package</type>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cq-dependencies-view</artifactId>
-            <version>${project.version}</version>
-            <type>content-package</type>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cq-dependencies-taglib</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>cq-dependencies-services</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>com.cqblueprints.taglib</groupId>
             <artifactId>cqblueprints-taglib-all</artifactId>
@@ -68,29 +45,7 @@
                         </goals>
                         <configuration>
                             <embeddedTarget>/apps/cq-dependencies/install</embeddedTarget>
-                            <embeddeds>
-                                <embedded>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>cq-dependencies-services</artifactId>
-                                    <filter>true</filter>
-                                </embedded>
-                                <embedded>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>cq-dependencies-taglib</artifactId>
-                                    <filter>true</filter>
-                                </embedded>
-                            </embeddeds>
                             <subPackages>
-                                <subPackage>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>cq-dependencies-config</artifactId>
-                                    <filter>true</filter>
-                                </subPackage>
-                                <subPackage>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>cq-dependencies-view</artifactId>
-                                    <filter>true</filter>
-                                </subPackage>
                                 <subPackage>
                                     <groupId>com.cqblueprints.taglib</groupId>
                                     <artifactId>cqblueprints-taglib-all</artifactId>

@@ -29,6 +29,7 @@
     </properties>
 
     <modules>
+        <module>cq-dependencies-config</module>
         <module>cq-dependencies-install</module>
     </modules>
 

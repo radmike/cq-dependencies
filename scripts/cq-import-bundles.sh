@@ -30,7 +30,7 @@ echo '--------------------------------------------------------------------------
 echo 'auto deploying bundles...'
 echo '-------------------------------------------------------------------------------'
 
-$PRJ_HOME/scripts/cq-deploy.sh $1 clean-bundles services taglib || exit
+$PRJ_HOME/scripts/cq-deploy.sh $1 clean-bundles install || exit
 
 # End script execution
 
