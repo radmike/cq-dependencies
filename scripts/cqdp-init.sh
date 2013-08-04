@@ -22,7 +22,7 @@ echo '>>------------------------------------------------------------------------
 echo
 
 # import config to set admin credentials for vlt
-$PRJ_HOME/scripts/cq-deploy.sh $1 clean-bundles clean-clientlibs config || exit
+$PRJ_HOME/scripts/cqdp-deploy.sh $1 clean-bundles clean-clientlibs config || exit
 
 # build parent project - no autodeploy
 cd $PRJ_HOME

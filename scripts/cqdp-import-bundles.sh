@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This script imports all node projects into CQ
+# This script imports all bundle projects into CQ
 #
 
 
@@ -14,12 +14,11 @@ PRJ_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 # Start script execution
 
 echo '-------------------------------------------------------------------------------'
-echo 'import all node projects into cq'
+echo 'import all bundles into cq'
 echo '-------------------------------------------------------------------------------'
 echo ''
-echo 'imports non-bundled directories via:'
-echo '    vlt import -v http://localhost:4502/crx '
-echo '        '$PRJ_HOME'/{project-name}-{subproject-name}/src/main/content/jcr_root/YYYYY /'
+echo 'auto-deploys all bundles via:'
+echo '  mvn -Pauto-deploy install'
 echo ''
 echo 'project home: '
 echo '  ' $PRJ_HOME
@@ -28,11 +27,10 @@ echo
 
 
 echo '-------------------------------------------------------------------------------'
-echo 'vault import starting...'
+echo 'auto deploying bundles...'
 echo '-------------------------------------------------------------------------------'
 
-
-$PRJ_HOME/scripts/cq-deploy.sh $1 clean-clientlibs config || exit
+$PRJ_HOME/scripts/cqdp-deploy.sh $1 clean-bundles install || exit
 
 # End script execution
 
