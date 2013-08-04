@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<workspaceFilter version="1.0">
+    <filter root="/apps/cq-dependencies">
+        <exclude pattern="/apps/cq-dependencies/install.*"/>
+        <exclude pattern="/apps/cq-dependencies/runmodes.*"/>
+    </filter>
+    <filter root="/etc/clientlibs/cq-dependencies"/>
+	<filter root="/etc/designs/cq-dependencies">
+        <exclude pattern="/etc/designs/cq-dependencies/jcr:content.*"/>
+    </filter>
+</workspaceFilter>
