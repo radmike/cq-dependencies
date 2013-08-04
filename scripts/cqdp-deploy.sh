@@ -12,7 +12,7 @@ CURRENT_DIR="$( pwd )"
 PRJ_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
 # Environment Defaults
-project=cqblueprints-dependencies
+project=cq-dependencies
 cqhost='localhost'
 cqport=4504
 cquser='admin'
