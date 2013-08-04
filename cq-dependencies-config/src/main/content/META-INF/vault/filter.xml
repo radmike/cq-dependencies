@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <workspaceFilter version="1.0">
-    <filter root="/apps/pnc-com/runmodes"/>
-    <filter root="/apps/pnc-com/install"/>
-    <filter root="/etc/map">
-        <include pattern="/etc/map/pnc-com-.*"/>
-    </filter>
+    <filter root="/apps/cq-dependencies/install"/>
 </workspaceFilter>
