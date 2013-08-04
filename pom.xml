@@ -18,7 +18,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- 
+        <!--
             the following CQ connection properties are the default out-of-the-box CQ settings and are used by all modules in this project.
             you should override them in your local settings.xml file if your CQ environment is different.
         -->
@@ -28,32 +28,8 @@
         <cq.password>admin</cq.password>
     </properties>
 
-    <scm>
-        <connection><!-- TODO --></connection>
-        <developerConnection><!-- TODO --></developerConnection>
-        <url><!-- TODO --></url>
-    </scm>
-
-    <distributionManagement>
-        <repository>
-            <id><!-- TODO --></id>
-            <name><!-- TODO --></name>
-            <url><!-- TODO --></url>
-        </repository>
-        <snapshotRepository>
-            <id><!-- TODO --></id>
-            <name><!-- TODO --></name>
-            <url><!-- TODO --></url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <modules>
-        <module>cq-dependencies-view</module>
-        <module>cq-dependencies-services</module>
-        <module>cq-dependencies-config</module>
-        <module>cq-dependencies-taglib</module>
-        <module>cq-dependencies-content</module>
-        <module>cq-dependencies-all</module>
+        <module>cq-dependencies-install</module>
     </modules>
 
     <dependencyManagement>
@@ -187,7 +163,7 @@
             <build>
                 <pluginManagement>
                     <plugins>
-                        <!-- 
+                        <!--
                             this plugin holds configuration information for Maven plugins that the Eclipse m2e plugin does not know how to handle.
                             it does not affect the actual Maven build process.
                             you should activate the "eclipse" profile for this project and its sub-modules if you are working in Eclipse as it will remove
